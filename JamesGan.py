@@ -153,8 +153,8 @@ def train(gen, disc, gan, dataset, latent_dim, n_epochs, n_batch, save=True): #t
             print('>%d,%d/%d, d1 = %.3f, d2 = %.3f g = %.3f' %
                   (i + 1, j + 1, bat_per_epo, disc_loss_1, disc_loss_2, gan_loss))
     if (save == True):
-        gen.save('jamesgan%d_ld_%d_ep_gen.h5' % (latent_dim, n_epochs))
-        disc.save('jamesgan%d_ld_%d_ep_discrim.h5' % (latent_dim, n_epochs))
+        gen.save('models/jamesgan%d_ld_%d_ep_gen.h5' % (latent_dim, n_epochs))
+        disc.save('models/jamesgan%d_ld_%d_ep_discrim.h5' % (latent_dim, n_epochs))
 
 
 
@@ -167,8 +167,8 @@ def interval_train_no_load(gen, disc, gan, dataset, latent_dim, n_epochs, n_batc
         print('beginning run number %d, starting with epoch %d'%(i, eps))
         eps += n_epochs
         train(gen, disc, gan, dataset, latent_dim, n_epochs, n_batch, False)
-        gen.save('jamesgan%d_ld_%d_ep_gen.h5'%(latent_dim, eps))
-        disc.save('jamesgan%d_ld_%d_ep_discrim.h5'%(latent_dim, eps))
+        gen.save('models/jamesgan%d_ld_%d_ep_gen.h5'%(latent_dim, eps))
+        disc.save('models/jamesgan%d_ld_%d_ep_discrim.h5'%(latent_dim, eps))
 
 
 
