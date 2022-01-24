@@ -10,7 +10,13 @@ training to avoid mode collapse into a single output image. I tried many attempt
 smoothing (allowing labels to deviate slightly from only 1 and 0), and utilizing different nonlinearities. Eventually, I ended up with the following "transformation" gif of 
 generated images developing. The below animation shows images generated with the same latent dimensions by models at different points in the training process. 
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](progressgif.gif)
 
-Overall, I thoroughly enjoyed this project, and I hope to experiment with different GAN architectures in the future. I have plans to work on progressively growing
+## How To Use:
+Although I see no reason why you would want to use this model for any reason, especially given the wealth of pictures of my face already contained in this repository, now you too can generate your own images of my face if you do so wish. To train the model, run the JamesGAN.py file. I trained it on google colab with a GPU runtime and it still took
+a ver significant amount of time, just as a warning. After that, the jgan_gen file will allow you to generate images by using either a random latent vector, or one of your own choosing. 
+
+## Conclusion
+
+Overall, I thoroughly enjoyed this project. It was a challenging yet extremely rewarding process, and a fun way to deviate from the cookie-cutter ML models that often populate portfolios. Additionally, I hope to experiment with different GAN architectures in the future. I have plans to work on progressively growing
 GANs, as well as applications such as image-to-image, image segmentation, and style transfer models. 
